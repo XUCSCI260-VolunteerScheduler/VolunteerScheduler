@@ -25,5 +25,4 @@ public class ServiceExampleTest {
             assertEquals(ArrayIndexOutOfBoundsException.class, e.getClass());
         }
     }
-
 }
