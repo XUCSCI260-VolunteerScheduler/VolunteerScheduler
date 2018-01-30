@@ -14,15 +14,9 @@ public class ServiceExampleTest {
         assertEquals(realSum, testSum);
     }
 
-    @Test
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void throwException() {
         int[] array = new int[2];
-
-        try {
-            array[2] = 10; // should be out of bounds
-        }
-        catch (Exception e) {
-            assertEquals(ArrayIndexOutOfBoundsException.class, e.getClass());
-        }
+        array[2] = 10; // should be out of bounds
     }
 }
