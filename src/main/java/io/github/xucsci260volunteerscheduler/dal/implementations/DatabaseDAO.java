@@ -1,4 +1,4 @@
-package io.github.xucsci260volunteerscheduler.DAL.Implementations;
+package io.github.xucsci260volunteerscheduler.dal.implementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -1,7 +1,7 @@
-package io.github.xucsci260volunteerscheduler.Controller;
+package io.github.xucsci260volunteerscheduler.controller;
 
-import io.github.xucsci260volunteerscheduler.Domain.Tag;
-import io.github.xucsci260volunteerscheduler.Services.Interfaces.TagService;
+import io.github.xucsci260volunteerscheduler.domain.Tag;
+import io.github.xucsci260volunteerscheduler.services.interfaces.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

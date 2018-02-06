@@ -1,4 +1,4 @@
-package io.github.xucsci260volunteerscheduler.Domain;
+package io.github.xucsci260volunteerscheduler.domain;
 
 import java.io.Serializable;
 
