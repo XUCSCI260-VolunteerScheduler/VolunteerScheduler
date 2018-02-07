@@ -3,6 +3,11 @@ package io.github.xucsci260volunteerscheduler.domain;
 import java.sql.Date;
 import java.util.List;
 
+/**
+ * file Volunteer.java was created by chris on 2/7/18 at 4:14 PM
+ * for VolunteerScheduler
+ */
+
 public class Volunteer extends Person {
 
     private List<Date> availableTimes;

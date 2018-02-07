@@ -2,6 +2,11 @@ package io.github.xucsci260volunteerscheduler.domain;
 
 import java.sql.Date;
 
+/**
+ * file Person.java was created by chris on 2/7/18 at 4:14 PM
+ * for VolunteerScheduler
+ */
+
 public class Person {
     private String firstName, lastName, email, address, city, zip;
     private Date DoB;

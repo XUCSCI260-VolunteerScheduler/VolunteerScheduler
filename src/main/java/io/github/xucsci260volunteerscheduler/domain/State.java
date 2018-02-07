@@ -1,5 +1,10 @@
 package io.github.xucsci260volunteerscheduler.domain;
 
+/**
+ * file State.java was created by chris on 2/7/18 at 4:14 PM
+ * for VolunteerScheduler
+ */
+
 public enum State {
     AL("Alabama"),
     AK("Alaska"),
