@@ -7,4 +7,6 @@ import java.util.List;
 public interface TagDAO {
 
     List<Tag> getAllTags();
+
+    Tag addTag(String text);
 }

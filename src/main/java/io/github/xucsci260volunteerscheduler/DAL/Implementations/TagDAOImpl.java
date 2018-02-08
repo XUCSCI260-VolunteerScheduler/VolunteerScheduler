@@ -26,4 +26,15 @@ public class TagDAOImpl implements TagDAO {
         return jdbcTemplate.query(sql, (rs, rowNum) ->
         new Tag(rs.getString("T_NAME")));
     }
+
+    @Override
+    public Tag addTag(String text) {
+        String sql = "INSERT INTO TAG(T_NAME) VALUES (?);";
+
+        Tag t = new Tag(text);
+
+        jdbcTemplate.update(sql, new Object[] {text});
+
+        return t;
+    }
 }
