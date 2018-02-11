@@ -8,5 +8,7 @@ public interface TagDAO {
 
     List<Tag> getAllTags();
 
-    Tag addTag(String text);
+    boolean addTag(String text);
+
+    boolean removeTag(String text);
 }

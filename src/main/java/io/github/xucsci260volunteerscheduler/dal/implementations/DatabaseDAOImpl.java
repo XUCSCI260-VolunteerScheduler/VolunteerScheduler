@@ -17,9 +17,11 @@ public class DatabaseDAOImpl implements DatabaseDAO {
     }
 
     @Override
-    public void saveDatabase() {
-        String sql = "SCRIPT TO 'src/main/resources/database.sql'";
+    public boolean saveDatabase() {
+        String sql = "SCRIPT TO 'src/main/resources/data.sql'";
 
         jdbcTemplate.execute(sql);
+
+        return true;
     }
 }

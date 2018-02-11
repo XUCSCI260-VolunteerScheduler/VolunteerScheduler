@@ -22,8 +22,9 @@ public class TagServiceImpl implements TagService {
      * *** FOR TESTING ONLY ***
      * @param tagDAO
      */
-    public TagServiceImpl(TagDAO tagDAO) {
+    public TagServiceImpl(TagDAO tagDAO, DatabaseDAO databaseDAO) {
         this.tagDAO = tagDAO;
+        this.databaseDAO = databaseDAO;
     }
 
     @Override
@@ -33,10 +34,29 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public Tag addTag(String text) {
+        Tag t;
 
-        Tag t = tagDAO.addTag(text);
+        if (tagDAO.addTag(text)) {
+            t = new Tag(text);
 
-        databaseDAO.saveDatabase();
+            databaseDAO.saveDatabase();
+        } else {
+            t = null;
+        }
+
+        return t;
+    }
+
+    @Override
+    public Tag removeTag(String text) {
+        Tag t;
+        if (tagDAO.removeTag(text)) {
+            t = new Tag(text);
+
+            databaseDAO.saveDatabase();
+        } else {
+            t = null;
+        }
 
         return t;
     }

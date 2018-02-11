@@ -9,4 +9,6 @@ public interface TagService {
     List<Tag> getAllTags();
 
     Tag addTag(String text);
+
+    Tag removeTag(String text);
 }

@@ -28,13 +28,28 @@ public class TagDAOImpl implements TagDAO {
     }
 
     @Override
-    public Tag addTag(String text) {
-        String sql = "INSERT INTO TAG (T_NAME) VALUES (?)";
+    public boolean addTag(String text) {
+        boolean good = false;
 
-        Tag t = new Tag(text);
+        String sql = "INSERT INTO TAG (T_NAME) VALUES (?)";
 
         jdbcTemplate.update(sql, new Object[] {text});
 
-        return t;
+        good = true;
+
+        return good;
+    }
+
+    @Override
+    public boolean removeTag(String text) {
+        boolean good = false;
+
+        String sql = "DELETE FROM TAG WHERE T_NAME = ?";
+
+        jdbcTemplate.update(sql, new Object[] {text});
+
+        good = true;
+
+        return good;
     }
 }

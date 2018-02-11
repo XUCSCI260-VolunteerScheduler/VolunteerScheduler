@@ -11,20 +11,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-public class HomeController {
+public class TagController {
 
     @Autowired
     private TagService tagService;
 
-    @RequestMapping(value = "/allTags")
+    @RequestMapping(value = "/tags")
     public @ResponseBody List<Tag> getAllTags() {
 
         return tagService.getAllTags();
     }
 
-    @RequestMapping(value = "/addTag/{text}")
+    @RequestMapping(value = "/tags/add/{text}")
     public @ResponseBody Tag addTag(@PathVariable("text") String text) {
-
         return tagService.addTag(text);
+    }
+
+    @RequestMapping(value = "/tags/remove/{text}")
+    public @ResponseBody Tag removeTag(@PathVariable("text") String text) {
+        return tagService.removeTag(text);
     }
 }
