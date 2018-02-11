@@ -1,3 +1,4 @@
+/*
 DROP TABLE PERSON IF EXISTS;
 CREATE MEMORY TABLE PERSON(
   P_USERNAME       VARCHAR(255) NOT NULL,
@@ -19,15 +20,27 @@ CREATE MEMORY TABLE VOLUNTEER(
   FOREIGN KEY (V_USERNAME) REFERENCES PERSON
 );
 
+DROP TABLE SCHOOL IF EXISTS;
+CREATE MEMORY TABLE SCHOOL(
+  SCH_ID          INTEGER NOT NULL,
+  SCH_NAME        VARCHAR(255) NOT NULL,
+  SCH_ADDRESS     VARCHAR(255) NOT NULL,
+  SCH_CITY        VARCHAR(255) NOT NULL,
+  SCH_STATE       VARCHAR(2) NOT NULL,
+  SCH_ZIP         VARCHAR(5) NOT NULL,
+  PRIMARY KEY (SCH_ID)
+);
+
 DROP TABLE STUDENT IF EXISTS;
 CREATE MEMORY TABLE STUDENT(
   S_USERNAME       VARCHAR(255) NOT NULL,
-  S_SCHOOL         VARCHAR(255) NOT NULL,
+  S_SCHOOL         INTEGER NOT NULL,
   S_MAJOR          VARCHAR(255) NOT NULL,
   S_GRADYEAR       INTEGER NOT NULL,
   S_ID             VARCHAR(255) NOT NULL,
   PRIMARY KEY (S_USERNAME),
-  FOREIGN KEY (S_USERNAME) REFERENCES VOLUNTEER
+  FOREIGN KEY (S_USERNAME) REFERENCES VOLUNTEER,
+  FOREIGN KEY (S_SCHOOL) REFERENCES SCHOOL
 );
 
 DROP TABLE AVAILABLETIME IF EXISTS;
@@ -108,3 +121,44 @@ CREATE MEMORY TABLE VOLUNTEEREVENT(
   FOREIGN KEY (VE_VOLUNTEER) REFERENCES VOLUNTEER,
   FOREIGN KEY (VE_EVENT) REFERENCES EVENT
 );
+
+
+
+INSERT INTO PUBLIC.TAG(T_NAME) VALUES
+  ('Advocacy'),
+  ('Arts'),
+  ('Cooperative Business'),
+  ('Counseling'),
+  ('Crisis Intervention'),
+  ('Culture'),
+  ('Disabilities'),
+  ('Disaster Relief'),
+  ('Domestic Violence'),
+  ('Economic Justice'),
+  ('Education'),
+  ('Elderly'),
+  ('Emergency Assistance'),
+  ('Environment'),
+  ('Financial Counseling'),
+  ('Healthcare'),
+  ('History'),
+  ('Homelessness'),
+  ('Housing'),
+  ('Human Rights'),
+  ('Immigration'),
+  ('Literacy'),
+  ('Mental Health'),
+  ('Mentoring'),
+  ('Nature'),
+  ('Nutrition'),
+  ('Poverty'),
+  ('Recreation'),
+  ('Senior Services'),
+  ('Social Justice'),
+  ('Substance Abuse'),
+  ('Tutoring'),
+  ('Veterans Issues'),
+  ('Women''s issues'),
+  ('Youth');
+
+*/
