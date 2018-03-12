@@ -18,6 +18,10 @@ public class TagDAOImpl implements TagDAO {
         this.jdbcTemplate = jdbc;
     }
 
+    /**
+     * queries database for all tags
+     * @return all tags in database
+     */
     @Override
     public List<Tag> getAllTags() {
         String sql = "SELECT * FROM TAG";
@@ -27,29 +31,32 @@ public class TagDAOImpl implements TagDAO {
                     new Tag(rs.getString("T_NAME")));
     }
 
+    /**
+     * inserts new tag into the database
+     * @param text of tag to create
+     * @return tag that was inserted
+     */
     @Override
     public boolean addTag(String text) {
-        boolean good = false;
-
         String sql = "INSERT INTO TAG (T_NAME) VALUES (?)";
 
         jdbcTemplate.update(sql, new Object[] {text});
 
-        good = true;
-
-        return good;
+        return true;
     }
 
+    /**
+     * removes tag from database
+     * @param text of tag to remove
+     * @return tag that was removed
+     */
     @Override
     public boolean removeTag(String text) {
-        boolean good = false;
 
         String sql = "DELETE FROM TAG WHERE T_NAME = ?";
 
         jdbcTemplate.update(sql, new Object[] {text});
 
-        good = true;
-
-        return good;
+        return true;
     }
 }
