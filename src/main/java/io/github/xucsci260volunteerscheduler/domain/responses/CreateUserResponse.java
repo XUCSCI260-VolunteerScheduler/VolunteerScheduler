@@ -1,6 +1,6 @@
-package io.github.VolunteerScheduler.domain.responses;
+package io.github.xucsci260volunteerscheduler.domain.responses;
 
-import io.github.VolunteerScheduler.domain.User;
+import io.github.xucsci260volunteerscheduler.domain.User;
 
 /**
  * The file CreateUserResponse.java was created by Grant on 3:09 PM at 4/3/2018

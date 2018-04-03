@@ -1,6 +1,6 @@
-package io.github.VolunteerScheduler.domain.requests;
+package io.github.xucsci260volunteerscheduler.domain.requests;
 
-import io.github.VolunteerScheduler.domain.helpers.GetMethodEnum;
+import io.github.xucsci260volunteerscheduler.domain.helpers.GetMethodEnum;
 
 /**
  * The file GetUserRequest.java was created by Grant on 1:00 PM at 4/3/2018

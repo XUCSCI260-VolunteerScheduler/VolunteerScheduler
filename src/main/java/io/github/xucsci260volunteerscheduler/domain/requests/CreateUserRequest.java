@@ -1,6 +1,6 @@
-package io.github.VolunteerScheduler.domain.requests;
+package io.github.xucsci260volunteerscheduler.domain.requests;
 
-import io.github.VolunteerScheduler.domain.User;
+import io.github.xucsci260volunteerscheduler.domain.User;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -1,11 +1,11 @@
-package io.github.VolunteerScheduler.controller;
+package io.github.xucsci260volunteerscheduler.controller;
 
 
-import io.github.VolunteerScheduler.domain.Volunteer;
-import io.github.VolunteerScheduler.domain.requests.CreateUserRequest;
-import io.github.VolunteerScheduler.domain.requests.GetUserRequest;
-import io.github.VolunteerScheduler.domain.responses.CreateUserResponse;
-import io.github.VolunteerScheduler.services.interfaces.UserService;
+import io.github.xucsci260volunteerscheduler.domain.Volunteer;
+import io.github.xucsci260volunteerscheduler.domain.requests.CreateUserRequest;
+import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
+import io.github.xucsci260volunteerscheduler.domain.responses.CreateUserResponse;
+import io.github.xucsci260volunteerscheduler.services.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
