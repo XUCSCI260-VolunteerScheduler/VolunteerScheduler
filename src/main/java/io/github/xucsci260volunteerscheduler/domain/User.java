@@ -1,4 +1,4 @@
-package io.github.xucsci260volunteerscheduler.domain.objects;
+package io.github.xucsci260volunteerscheduler.domain;
 
 import java.sql.Date;
 
