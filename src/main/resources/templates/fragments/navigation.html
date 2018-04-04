@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8">
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/navigation/navigation.css}" />
+    <link rel="icon" th:href="@{/assets/images/gear.png}" />
+</head>
+<body>
+    <div th:fragment="navigationLoggedIn">
+        <div id="navigation">
+            <ul id="navigation-items">
+                <li><a th:href="@{/}"><span>Home</span></a></li>
+                <li><a th:href="@{/volunteer}"><span>Find Volunteer Opportunities</span></a></li>
+                <li><a th:href="@{/logout}"><span>Logout</span></a></li>
+            </ul>
+        </div>
+        <div id="profilebutton">
+
+        </div>
+    </div>
+
+    <div th:fragment="navigationLoggedOut">
+        <div id="navigation">
+            <ul id="navigation-items">
+                <li><a th:href="@{/}"><span>Home</span></a></li>
+                <li><a th:href="@{/login"><span>Login</span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
