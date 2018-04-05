@@ -8,7 +8,7 @@ public class HomeController {
 
     @RequestMapping(value = {"/", "/home"})
     public String goHome() {
-        return "/src/main/resources/templates/Website/Home.html"
+        return "/src/main/resources/templates/Website/Home.html";
         //return "home";
     }
 }
