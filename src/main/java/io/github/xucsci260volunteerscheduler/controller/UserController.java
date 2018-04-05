@@ -6,7 +6,7 @@ import io.github.xucsci260volunteerscheduler.domain.requests.CreateUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.responses.CreateUserResponse;
 import io.github.xucsci260volunteerscheduler.services.interfaces.UserService;
-import io.github.xucsci260volunteerscheduler.domain.User;
+//import io.github.xucsci260volunteerscheduler.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
