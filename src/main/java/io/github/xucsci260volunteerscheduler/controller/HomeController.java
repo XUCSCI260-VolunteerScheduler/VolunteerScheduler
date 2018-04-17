@@ -15,5 +15,12 @@ public class HomeController {
       public String goAbout() {
         return "about";
       }
-
+    @RequestMapping(value = {"/Login"})
+    public String goLogin() {
+      return "Login";
+    }
+    @RequestMapping(value = {"/CreateUser"})
+    public String goCreateUser() {
+      return "CreateUser";
+    }
     }
