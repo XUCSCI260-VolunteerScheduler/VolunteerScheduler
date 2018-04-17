@@ -10,10 +10,10 @@ public class HomeController {
     public String goHome() {
         return "home";
 }
-/*
-    @RequestMapping(value = {"/", "/about"})
+
+    @RequestMapping(value = {"/about"})
       public String goAbout() {
         return "about";
       }
-      */
+
     }
