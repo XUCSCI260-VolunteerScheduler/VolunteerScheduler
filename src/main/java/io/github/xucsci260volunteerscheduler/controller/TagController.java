@@ -13,38 +13,20 @@ import java.util.List;
 @Controller
 public class TagController {
 
+    @Autowired
     private TagService tagService;
 
-    @Autowired
-    public TagController(TagService tagService) {
-        this.tagService = tagService;
-    }
-
-    /**
-     * calls service to get all tags
-     * @return List of all tags
-     */
     @RequestMapping(value = "/tags")
     public @ResponseBody List<Tag> getAllTags() {
 
         return tagService.getAllTags();
     }
 
-    /**
-     * creates new tag
-     * @param text of new tag
-     * @return new tag
-     */
     @RequestMapping(value = "/tags/add/{text}")
     public @ResponseBody Tag addTag(@PathVariable("text") String text) {
         return tagService.addTag(text);
     }
 
-    /**
-     * removes tag
-     * @param text text of tag to remove
-     * @return removed tag
-     */
     @RequestMapping(value = "/tags/remove/{text}")
     public @ResponseBody Tag removeTag(@PathVariable("text") String text) {
         return tagService.removeTag(text);

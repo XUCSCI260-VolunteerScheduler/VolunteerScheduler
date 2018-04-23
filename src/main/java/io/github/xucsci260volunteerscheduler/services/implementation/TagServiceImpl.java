@@ -12,34 +12,26 @@ import java.util.List;
 @Component
 public class TagServiceImpl implements TagService {
 
+    @Autowired
     private TagDAO tagDAO;
+    @Autowired
     private DatabaseDAO databaseDAO;
 
     /**
-     * Autowired constructor
-     * @param tagDAO tag Data Access Object
-     * @param databaseDAO database Data Access Object
+     * Constructor for passing a mocked DAO
+     * *** FOR TESTING ONLY ***
+     * @param tagDAO
      */
-    @Autowired
     public TagServiceImpl(TagDAO tagDAO, DatabaseDAO databaseDAO) {
         this.tagDAO = tagDAO;
         this.databaseDAO = databaseDAO;
     }
 
-    /**
-     * calls DAL to return all tags in database
-     * @return all tags in database
-     */
     @Override
     public List<Tag> getAllTags() {
         return tagDAO.getAllTags();
     }
 
-    /**
-     * calls DAL to add new tag to the database
-     * @param text of new tag
-     * @return new tag
-     */
     @Override
     public Tag addTag(String text) {
         Tag t;
@@ -55,11 +47,6 @@ public class TagServiceImpl implements TagService {
         return t;
     }
 
-    /**
-     * calls DAL to remove tag from the database
-     * @param text of tag to remove
-     * @return removed tag
-     */
     @Override
     public Tag removeTag(String text) {
         Tag t;

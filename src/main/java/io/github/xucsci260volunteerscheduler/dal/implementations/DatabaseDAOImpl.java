@@ -16,10 +16,6 @@ public class DatabaseDAOImpl implements DatabaseDAO {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    /**
-     * save database to disk
-     * @return successful
-     */
     @Override
     public boolean saveDatabase() {
         String sql = "SCRIPT TO 'src/main/resources/data.sql'";

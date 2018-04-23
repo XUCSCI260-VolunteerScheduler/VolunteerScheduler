@@ -8,19 +8,7 @@ public class HomeController {
 
     @RequestMapping(value = {"/", "/home"})
     public String goHome() {
+        //return "/src/main/resources/templates/home.html";
         return "home";
+    }
 }
-
-    @RequestMapping(value = {"/about"})
-      public String goAbout() {
-        return "about";
-      }
-    @RequestMapping(value = {"/Login"})
-    public String goLogin() {
-      return "Login";
-    }
-    @RequestMapping(value = {"/CreateUser"})
-    public String goCreateUser() {
-      return "CreateUser";
-    }
-    }
