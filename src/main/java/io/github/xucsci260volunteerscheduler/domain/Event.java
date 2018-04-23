@@ -12,7 +12,7 @@ public class Event {
     private String name, desc, email, phone, address, city, zip, state, startTime, endTime;
     private Date date;
 
-    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, Date date{
+    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, Date date){
         State realState = State.valueOf(state);
 
         setVars(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
