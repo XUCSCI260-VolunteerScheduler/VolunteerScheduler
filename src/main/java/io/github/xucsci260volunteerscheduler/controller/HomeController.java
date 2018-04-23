@@ -22,10 +22,10 @@ public class HomeController {
     @RequestMapping(value = {"/CreateUser"})
     public String goCreateUser() {
       return "CreateUser";
-
+}
     @RequestMapping(value= {"/CreateEvent"})
     public String goCreateEvent(){
       return "Event";
     }
-    }
+
     }
