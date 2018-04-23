@@ -24,7 +24,7 @@ public class HomeController {
       return "CreateUser";
 
     @RequestMapping(value= {"/CreateEvent"})
-    public String goCreatEvent(){
+    public String goCreateEvent(){
       return "Event";
     }
     }
