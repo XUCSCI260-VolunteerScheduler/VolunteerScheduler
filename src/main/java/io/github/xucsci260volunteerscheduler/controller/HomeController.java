@@ -10,10 +10,17 @@ public class HomeController {
     public String goHome() {
         return "home";
 }
-/*
-    @RequestMapping(value = {"/", "/about"})
+
+    @RequestMapping(value = {"/about"})
       public String goAbout() {
         return "about";
       }
-      */
+    @RequestMapping(value = {"/Login"})
+    public String goLogin() {
+      return "Login";
+    }
+    @RequestMapping(value = {"/CreateUser"})
+    public String goCreateUser() {
+      return "CreateUser";
+    }
     }
