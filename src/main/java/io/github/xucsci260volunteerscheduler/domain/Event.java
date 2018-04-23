@@ -1,6 +1,7 @@
 package io.github.xucsci260volunteerscheduler.domain;
 
 import java.sql.Date;
+import java.util.Date;
 
 /**
  *Created on 4/20
@@ -8,15 +9,16 @@ import java.sql.Date;
  */
 
 public class Event {
-    private String name, desc, email, phone, address, city, zip, state;
+    private String name, desc, email, phone, address, city, zip, state, startTime, endTime;
+    private Date date;
 
-    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state){
+    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, Date date{
         State realState = State.valueOf(state);
 
-        setVars(name, desc, email, phone, address, city, zip, state);
+        setVars(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
     }
 
-    private void setVars(String name, String desc, String email, String phone, String address, String city, String zip, String state){
+    private void setVars(String name, String desc, String email, String phone, String address, String city, String zip, String state, Date date){
         this.name = name;
         this.desc = desc;
         this.email = email;
@@ -25,6 +27,9 @@ public class Event {
         this.city = city;
         this.zip = zip;
         this.state = state;
+        this.date = date;
+        this.startTime = startTime;
+        this.endTime = endTime;
     }
 
     public String getName(){
@@ -89,6 +94,30 @@ public class Event {
 
     public void setState(String state){
         this.state = state;
+    }
+
+    public void setStartTime(String startTime){
+      this.startTime = startTime
+    }
+
+    public void getStartTime(){
+      return startTime;
+    }
+
+    public void setEndTime(String endTime){
+      this.endTime = endTime;
+    }
+
+    public void getEndTime(){
+      return endTime;
+    }
+
+    public void setDate(Date date){
+      this.date = date;
+    }
+
+    public void getDate(){
+      return date.getDate();
     }
 
 }
