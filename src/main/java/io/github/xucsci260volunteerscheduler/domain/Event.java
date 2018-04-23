@@ -97,7 +97,7 @@ public class Event {
     }
 
     public void setStartTime(String startTime){
-      this.startTime = startTime
+      this.startTime = startTime;
     }
 
     public void getStartTime(){
