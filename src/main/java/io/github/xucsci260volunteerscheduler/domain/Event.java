@@ -1,7 +1,6 @@
 package io.github.xucsci260volunteerscheduler.domain;
 
 import java.sql.Date;
-import java.util.Date;
 
 /**
  *Created on 4/20
