@@ -1,22 +1,31 @@
 <html>
 <head>
-
-<title>Login</title>
-
+    <meta charset="UTF-8"/>
+    <title>Login</title>
 </head>
 <link rel="stylesheet" type="text/css" href="styler.css"/>
 <body>
-<h1>Login</h1>
-<hr/>
+    <div id="header">
+        <h1>Sign-Up</h1>
+    </div>
 
+    <hr/>
 
-<form action="Account.html">
-  Username: <input type="text" name="username"><br><br>
-  Password: <input type="password" name="password"><br><br>
-  <button type="submit" value="Submit">Submit</button>
-</form>
-<form action="Home.html">
-  <button href="cancel" value="Cancel">Cancel</a></button>
-</form>
-</body>
-</html>
+    <form id="Login" method="post" th:action="@{/users/compare}">
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email"/></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"/></td>
+            </tr>
+            <tr>
+                <td><input id="loginButton" type="Login" name="Login" value="Login"/></td>
+            </tr>
+          </table>
+      </form>
+  </body>
+  </html>
