@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 //import src.main.java.io.github.xucsci260volunteerscheduler.domain.Event.java;
 //import src.main.java.io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository.java;
-import domain.Event;
+import io.github.xucsci260volunteerscheduler.domain.Event;
 import interfaces.EventRepository;
 
 @Controller
