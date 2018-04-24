@@ -24,10 +24,10 @@ public class Event {
         this.address = address;
         this.city = city;
         this.zip = zip;
-        this.state = state;
-        this.date = date;
+        this.state = state;        
         this.startTime = startTime;
         this.endTime = endTime;
+        this.date = date;
     }
 
     public String getName(){

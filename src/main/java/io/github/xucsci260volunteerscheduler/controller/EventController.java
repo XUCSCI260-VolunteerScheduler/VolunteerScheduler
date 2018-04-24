@@ -19,7 +19,7 @@ public class EventController {
     private EventRepository eventRepository;
 
     @RequestMapping(value="/addEvent", method = RequestMethod.POST)
-    public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime,, @RequestParam String endTime, @RequestParam String date) {
+    public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime, @RequestParam String endTime, @RequestParam String date) {
         Event e = new Event(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
 /*
         e.setName(name);
