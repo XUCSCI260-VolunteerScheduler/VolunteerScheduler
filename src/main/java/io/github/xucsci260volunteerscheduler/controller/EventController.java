@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //import src.main.java.io.github.xucsci260volunteerscheduler.domain.Event.java;
 //import src.main.java.io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository.java;
 import io.github.xucsci260volunteerscheduler.domain.Event;
-import io.github.xucsci260volunteerscheduler.interfaces.EventRepository;
+import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
 
 @Controller
 @RequestMapping(path="/home")
@@ -19,8 +19,9 @@ public class EventController {
     private EventRepository eventRepository;
 
     @GetMapping(path="/addEvent")
-    public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state) {
-        Event e = new Event();
+    public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam startTime,, @RequestParam endTime, @RequestParam date) {
+        Event e = new Event(name, desc, email,phone,address,city,zip,state,startTime,endTime,date);
+/*
         e.setName(name);
         e.setDesc(desc);
         e.setEmail(email);
@@ -30,6 +31,7 @@ public class EventController {
         e.setZip(zip);
         e.setState(state);
         eventRepository.save(e);
+        */
         return "home";
     }
 
