@@ -18,7 +18,7 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-    @GetMapping(path="/add")
+    @GetMapping(path="/addEvent")
     public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state) {
         Event e = new Event();
         e.setName(name);
@@ -30,7 +30,7 @@ public class EventController {
         e.setZip(zip);
         e.setState(state);
         eventRepository.save(e);
-        return "Saved";
+        return "home";
     }
 
     @GetMapping(path="/all")
