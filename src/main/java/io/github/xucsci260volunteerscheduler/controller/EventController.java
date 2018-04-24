@@ -19,7 +19,7 @@ public class EventController {
     private EventRepository eventRepository;
 
     @GetMapping(path="/addEvent")
-    public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam startTime,, @RequestParam endTime, @RequestParam date) {
+    public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime,, @RequestParam String endTime, @RequestParam String date) {
         Event e = new Event(name, desc, email,phone,address,city,zip,state,startTime,endTime,date);
 /*
         e.setName(name);
