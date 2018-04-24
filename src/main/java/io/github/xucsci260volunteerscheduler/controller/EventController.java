@@ -11,12 +11,12 @@ import src.main.java.io.github.xucsci260volunteerscheduler.domain.Event.java;
 import src.main.java.io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository.java;
 
 @Controller
-@RequestMapping(path='/home')
+@RequestMapping(path="/home")
 public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-    @GetMapping(path='/add')
+    @GetMapping(path="/add")
     public @ResponseBody String addNewEvent (@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state) {
         Event e = new Event();
         e.setName(name);
