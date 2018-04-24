@@ -99,7 +99,7 @@ public class Event {
       this.startTime = startTime;
     }
 
-    public void getStartTime(){
+    public String getStartTime(){
       return startTime;
     }
 
@@ -107,7 +107,7 @@ public class Event {
       this.endTime = endTime;
     }
 
-    public void getEndTime(){
+    public String getEndTime(){
       return endTime;
     }
 
@@ -115,7 +115,7 @@ public class Event {
       this.date = date;
     }
 
-    public void getDate(){
+    public String getDate(){
       return date.getDate();
     }
 
