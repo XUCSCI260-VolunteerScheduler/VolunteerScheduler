@@ -1,6 +1,6 @@
 package io.github.xucsci260volunteerscheduler.domain;
 
-import java.sql.Date;
+//import java.sql.Date;
 
 /**
  *Created on 4/20
@@ -8,16 +8,15 @@ import java.sql.Date;
  */
 
 public class Event {
-    private String name, desc, email, phone, address, city, zip, state, startTime, endTime;
-    private Date date;
+    private String name, desc, email, phone, address, city, zip, state, startTime, endTime, date;
 
-    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, Date date){
+    public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, String date){
         State realState = State.valueOf(state);
 
         setVars(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
     }
 
-    private void setVars(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, Date date){
+    private void setVars(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, String date){
         this.name = name;
         this.desc = desc;
         this.email = email;
@@ -25,10 +24,10 @@ public class Event {
         this.address = address;
         this.city = city;
         this.zip = zip;
-        this.state = state;
-        this.date = date;
+        this.state = state;        
         this.startTime = startTime;
         this.endTime = endTime;
+        this.date = date;
     }
 
     public String getName(){
@@ -99,7 +98,7 @@ public class Event {
       this.startTime = startTime;
     }
 
-    public void getStartTime(){
+    public String getStartTime(){
       return startTime;
     }
 
@@ -107,16 +106,16 @@ public class Event {
       this.endTime = endTime;
     }
 
-    public void getEndTime(){
+    public String getEndTime(){
       return endTime;
     }
 
-    public void setDate(Date date){
+    public void setDate(String date){
       this.date = date;
     }
 
-    public void getDate(){
-      return date.getDate();
+    public String getDate(){
+      return date;
     }
 
 }

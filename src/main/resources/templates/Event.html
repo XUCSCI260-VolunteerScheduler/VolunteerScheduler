@@ -39,7 +39,7 @@
             </tr>
             <tr>
                 <td>Date of Event:</td>
-                <td><input type="date" name="doe"/></td>
+                <td><input type="text" name="doe"/></td>
             </tr>
             <tr>
                 <td>Start of Event Time:</td>
@@ -50,11 +50,11 @@
                 <td><input type="text" name="endTime"/></td>
             </tr>
             <tr>
-                <td>email:</td>
+                <td>Email:</td>
                 <td><input type="text" name="email"/></td>
             </tr>
             <tr>
-                <td><input id="createEventSubmitButton" type="submit" name="submit" value="submit"/></td>
+                <td><input id="createEventSubmitButton" type="submit" name="submit" value="Submit" th:action="addEvent"/></td>
             </tr>
         </table>
     </form>
