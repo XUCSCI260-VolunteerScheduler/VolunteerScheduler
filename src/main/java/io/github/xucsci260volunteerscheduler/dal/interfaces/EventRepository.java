@@ -6,5 +6,7 @@ import io.github.xucsci260volunteerscheduler.domain.Event;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface EventRepository extends MongoRepository<Customer, String> {
-
+    public Iterable<Event> findAll(){
+      
+    }
 }
