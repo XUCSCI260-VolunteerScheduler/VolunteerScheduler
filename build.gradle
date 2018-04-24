@@ -17,6 +17,13 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'idea'
+
+bootJar {
+	baseName = 'gs-accessing-data-mongodb'
+	version =  '0.1.0'
+}
 
 group = 'io.github.xucsci260volunteerscheduler'
 version = '0.0.1-SNAPSHOT'
