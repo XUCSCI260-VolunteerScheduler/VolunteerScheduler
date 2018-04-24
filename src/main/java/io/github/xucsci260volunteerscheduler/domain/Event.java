@@ -115,7 +115,7 @@ public class Event {
       this.date = date;
     }
 
-    public String getDate(){
+    public Date getDate(){
       return date.getDate();
     }
 
