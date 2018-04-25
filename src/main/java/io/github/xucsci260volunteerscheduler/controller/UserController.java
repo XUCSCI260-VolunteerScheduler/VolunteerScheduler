@@ -7,6 +7,7 @@ import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.responses.CreateUserResponse;
 import io.github.xucsci260volunteerscheduler.services.interfaces.UserService;
 import io.github.xucsci260volunteerscheduler.domain.User;
+import io.github.xucsci260volunteerscheduler.domain.helpers.GetMethodEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -58,11 +59,10 @@ public class UserController {
                                          @RequestParam("email") String email,
                                          @RequestParam("firstName") String first,
                                          @RequestParam("lastName") String last,
-                                         @RequestParam("dob") Date dob,
+                                         @RequestParam("dob") String dob,
                                          @RequestParam("password") String password) {
-        Date join = Date.valueOf(LocalDate.now());
 
-        CreateUserRequest request = new CreateUserRequest(dob, join, username, email, first, last, password);
+        CreateUserRequest request = new CreateUserRequest(dob, username, email, first, last, password);
 
         CreateUserResponse response = userService.createUser(request);
 
