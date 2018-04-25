@@ -7,61 +7,37 @@ import java.sql.Date;
  */
 
 public class User {
-    private int id;
-    private Date dob;
-    private Date joinDate;
+    private String dob;
     private String username;
     private String email;
     private String firstName;
     private String lastName;
     private String password;
-    private String passwordHash;
 
-    public User(int id, Date dob, Date joinDate, String username, String email, String firstName, String lastName, String password, String passwordHash) {
-        this.id = id;
+    public User(String dob, String username, String email, String firstName, String lastName, String password) {
         this.dob = dob;
-        this.joinDate = joinDate;
         this.username = username;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-        this.passwordHash = passwordHash;
     }
 
-    public User(Date dob, Date joinDate, String username, String email, String firstName, String lastName, String password, String hash) {
+    public User(String dob, String username, String email, String firstName, String lastName, String password, String hash) {
         this.dob = dob;
-        this.joinDate = joinDate;
         this.username = username;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-        this.passwordHash = hash;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Date getDob() {
+    public String getDob() {
         return dob;
     }
 
-    public void setDob(Date dob) {
+    public void setDob(String dob) {
         this.dob = dob;
-    }
-
-    public Date getJoinDate() {
-        return joinDate;
-    }
-
-    public void setJoinDate(Date joinDate) {
-        this.joinDate = joinDate;
     }
 
     public String getUsername() {
@@ -102,13 +78,5 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
     }
 }
