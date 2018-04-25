@@ -22,7 +22,7 @@ public class CreateUserRequest {
     }
 
     public CreateUserRequest(Date dob, Date joinDate, String username, String email, String firstName, String lastName, String password) throws NoSuchAlgorithmException, NoSuchProviderException {
-        user = new User(dob, joinDate, username, email, firstName, lastName, password;
+        user = new User(dob, joinDate, username, email, firstName, lastName, password);
     }
 
     public User getUser() {
