@@ -21,7 +21,7 @@ public class CreateUserRequest {
         this.user = u;
     }
 
-    public CreateUserRequest(String dob, String username, String email, String firstName, String lastName, String password) throws NoSuchAlgorithmException, NoSuchProviderException {
+    public CreateUserRequest(String dob, String username, String email, String firstName, String lastName, String password){
         user = new User(dob, username, email, firstName, lastName, password);
     }
 
