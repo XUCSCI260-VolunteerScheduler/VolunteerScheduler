@@ -39,5 +39,6 @@ public class EventController {
     @GetMapping(path="/all")
     public @ResponseBody List<Event> getAllEvents() {
         return eventRepository.findAll();
+
     }
 }
