@@ -9,7 +9,5 @@ import java.util.List;
 
 
 public interface EventRepository extends MongoRepository<User, String> {
-    public List<Event> findAll(){
-
-    }
+    public List<Event> findAll();
 }
