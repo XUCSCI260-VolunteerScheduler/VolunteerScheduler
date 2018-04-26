@@ -14,7 +14,7 @@ import io.github.xucsci260volunteerscheduler.domain.Event;
 import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
 import java.util.List;
 import org.springframework.ui.Model;
-import org.springframework.stereotype.Repository;
+
 
 
 

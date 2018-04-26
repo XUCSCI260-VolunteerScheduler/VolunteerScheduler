@@ -7,6 +7,7 @@ package io.github.xucsci260volunteerscheduler.dal.interfaces;
         import org.springframework.data.mongodb.repository.MongoRepository;
         import org.springframework.data.repository.CrudRepository;
         import java.util.List;
+        import org.springframework.stereotype.Repository;
 
 public interface EventRepository extends CrudRepository {
     public List<Event> findAll();
