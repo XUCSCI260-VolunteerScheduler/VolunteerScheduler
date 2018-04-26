@@ -24,7 +24,7 @@ import org.springframework.ui.Model;
 
 public class EventController {
     @Autowired
-    private eventRepositoryImpl eventRepositoryImpl;
+    private EventRepositoryImpl eventRepositoryImpl;
 
     @RequestMapping(value="/events/create", method = RequestMethod.GET)
     public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime, @RequestParam String endTime, @RequestParam String date) {
