@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //import src.main.java.io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository.java;
 import io.github.xucsci260volunteerscheduler.domain.Event;
 import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
-import io.github.xucsci260volunteerscheduler.dal.implementations.EventRpositoryImpl;
+import io.github.xucsci260volunteerscheduler.dal.implementations.EventRepositoryImpl;
 import java.util.List;
 import org.springframework.ui.Model;
 
