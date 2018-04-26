@@ -30,10 +30,10 @@ public class HomeController {
       return "Event";
     }
 
-    @RequestMapping(value = "/addEventT", method = RequestMethod.POST)
-    public String addEvent(@ModelAttribute Event event) {
-        eventRepository.save(event);
-        return "redirect:home";
-    }
+//    @RequestMapping(value = "/addEventT", method = RequestMethod.POST)
+//    public String addEvent(@ModelAttribute Event event) {
+//        eventRepository.save(event);
+//        return "redirect:home";
+//    }
 
 }
