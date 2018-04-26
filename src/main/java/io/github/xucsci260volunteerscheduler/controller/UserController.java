@@ -70,8 +70,8 @@ public class UserController {
         return responseString;
     }
 
-    @RequestMapping(value = "/CreateUser", method = RequestMethod.GET)
+  /*  @RequestMapping(value = "/CreateUser", method = RequestMethod.GET)
     public String createUserForm() {
         return "createuserform";
-    }
+    }*/
 }
