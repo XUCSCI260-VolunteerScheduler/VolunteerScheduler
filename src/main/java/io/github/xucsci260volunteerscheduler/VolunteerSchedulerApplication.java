@@ -11,7 +11,7 @@ public class VolunteerSchedulerApplication {
     @RequestMapping("/home")
     @ResponseBody
     String home(){
-      return "home";
+      return "../../../resources/templates/home";
     }
 
     public static void main(String[] args) {
