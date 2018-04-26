@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public CreateUserResponse createUser(CreateUserRequest request) {
-        GetUserRequest getRequest = new GetUserRequest(GetMethodEnum.ID, request.getUser().getId(), "", "");
+        GetUserRequest getRequest = new GetUserRequest(GetMethodEnum.ID, request.getUser().getUsername(), "", "");
         CreateUserResponse response;
         User u = userDAO.getUser(getRequest);
 

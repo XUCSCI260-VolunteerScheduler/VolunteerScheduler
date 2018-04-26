@@ -33,7 +33,7 @@ import java.util.List;
 
         return jdbcTemplate.query(sql,
                 (rs, rowNum) ->
-                    new User(rs.getDate("U_DOB"),
+                    new User(rs.getString("U_DOB"),
                              rs.getString("U_USERNAME"),
                              rs.getString("U_EMAIL"),
                              rs.getString("U_FIRSTNAME"),
