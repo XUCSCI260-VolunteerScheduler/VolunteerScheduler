@@ -8,9 +8,19 @@ package io.github.xucsci260volunteerscheduler.dal.implementations;
         import java.util.List;
 
 
+ public class EventRpositoryImpl implements EventRepository
+ {
+   private JdbcTemplate jdbcTemplate;
+
+   public EventRpositoryImpl(JdbcTemplate jdbcTemplate){
+     this.jdbcTemplate = jdbcTemplate;
+   }
+
 public Event saveEvent(Event e){
 
       String sql = "INSERT INTO USERTABLE (E_NAME, E_DESC, E_EMAIL, E_ADDRESS, E_CITY, E_STATE, E_ZIP, E_DATE, E_STIME, E_ETIME) VALUES (?,?,?,? ?, ?, ?, ?, ?, ?)";
+
+
 
       jdbcTemplate.update(sql,
               e.getName(),
@@ -66,4 +76,5 @@ public List<Event> findAll()
          rs.getString("E_DATE"),
          rs.getString("E_STIME"),
          rs.getString("E_ETIME")));
+}
 }
