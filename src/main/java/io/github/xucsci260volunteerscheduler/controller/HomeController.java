@@ -2,6 +2,7 @@ package io.github.xucsci260volunteerscheduler.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import io.github.xucsci260volunteerscheduler.domain.Event;
 
 @Controller
 public class HomeController {
@@ -28,4 +29,11 @@ public class HomeController {
     public String goCreateEvent(){
       return "Event";
     }
+
+    @RequestMapping(value = "/addEventT", method = RequestMethod.POST)
+    public String addEvent(@ModelAttribute Event event) {
+        eventRepository.save(event);
+        return "redirect:home";
+    }
+
 }
