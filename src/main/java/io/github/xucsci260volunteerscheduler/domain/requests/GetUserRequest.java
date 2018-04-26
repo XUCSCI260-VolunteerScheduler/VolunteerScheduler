@@ -12,7 +12,7 @@ public class GetUserRequest {
     private String username;
     private GetMethodEnum method;
 
-    public GetUserRequest(GetMethodEnum method, String email) {
+    public GetUserRequest(GetMethodEnum method, String email, String username) {
         this.method = method;
         switch (method) {
             case EMAIL:
