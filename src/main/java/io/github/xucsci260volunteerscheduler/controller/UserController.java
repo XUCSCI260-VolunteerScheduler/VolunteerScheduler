@@ -63,7 +63,7 @@ public class UserController {
 
         CreateUserResponse response = userService.createUser(request);
 
-        String responseString = "createuserform";
+        String responseString = "CreateUser";
 
         if (response.isSuccessful()) {
             responseString = "home";
