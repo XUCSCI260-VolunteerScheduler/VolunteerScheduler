@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class VolunteerSchedulerApplication {
 
     @RequestMapping(value = {"/", "/home"})
-    @ResponseBody
     public String home(){
       return "home";
     }
