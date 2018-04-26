@@ -6,9 +6,12 @@ package io.github.xucsci260volunteerscheduler.dal.implementations;
         import io.github.xucsci260volunteerscheduler.domain.Event;
         import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
         import java.util.List;
+        import org.springframework.data.mongodb.repository.MongoRepository;
+        import org.springframework.data.repository.CrudRepository;
+        import org.springframework.stereotype.Repository;
 
 
- public class EventRepositoryImpl implements EventRepository
+ public class EventRepositoryImpl implements EventRepository extends MongoRepository<Event, String>
  {
    private JdbcTemplate jdbcTemplate;
 
