@@ -103,14 +103,14 @@ import java.util.List;
      */
     @Override
     public User createUser(User u) {
-        String sql = "INSERT INTO USERTABLE (U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_DOB, U_PASSWORD) VALUES ( ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO USERTABLE (U_DOB, U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_PASSWORD) VALUES ( ?, ?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(sql,
+                u.getDob(),
                 u.getUsername(),
                 u.getEmail(),
                 u.getFirstName(),
                 u.getLastName(),
-                u.getDob(),
                 u.getPassword());
 
         return u;
