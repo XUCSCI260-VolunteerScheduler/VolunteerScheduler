@@ -16,7 +16,7 @@ public class HomeController {
       public String goAbout() {
         return "about";
       }
-    @RequestMapping(value = {"/Login"})
+  /*  @RequestMapping(value = {"/Login"})
     public String goLogin() {
       return "Login";
     }
@@ -27,5 +27,5 @@ public class HomeController {
     @RequestMapping(value= {"/CreateEvent"})
     public String goCreateEvent(){
       return "Event";
-    }
+    }*/
 }
