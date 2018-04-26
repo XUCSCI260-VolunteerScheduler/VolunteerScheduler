@@ -42,7 +42,7 @@ public class UserController {
 
     @RequestMapping(value = "/users/get/email/{email}", method = RequestMethod.GET)
     public @ResponseBody User getUserByEmail(@PathVariable("email") String email) {
-        return getUser(new GetUserRequest(GetMethodEnum.EMAIL, email, ""));
+        return getUser(new GetUserRequest(GetMethodEnum.EMAIL, email));
     }
 
     private User getUser(GetUserRequest request) {
