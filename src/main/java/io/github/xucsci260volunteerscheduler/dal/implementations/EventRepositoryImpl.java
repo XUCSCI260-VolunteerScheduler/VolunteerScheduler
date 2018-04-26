@@ -11,7 +11,7 @@ package io.github.xucsci260volunteerscheduler.dal.implementations;
         import org.springframework.stereotype.Repository;
 
 
- public class EventRepositoryImpl implements EventRepository extends MongoRepository<Event, String>
+ public class EventRepositoryImpl implements EventRepository
  {
    private JdbcTemplate jdbcTemplate;
 
