@@ -57,13 +57,13 @@ public Event getEventName(String name)
   else{
     e = events.get(0);
   }
-  return e
+  return e;
 
 }
 
 public List<Event> findAll()
 {
-  String sql = "SELECT ALL FROM EVENTTABLE"
+  String sql = "SELECT ALL FROM EVENTTABLE";
   return jdbcTemplate.query(sql,
          (rs, rowNum) ->
          new User(rs.getString("E_NAME"),
