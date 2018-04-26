@@ -81,7 +81,7 @@ import java.util.List;
     }
 
     private User getUserUsername(String username) {
-        String sql = "SELECT ALL FROM USERTABLE WHERE U_USERNAME = " + username;
+        String sql = "SELECT * FROM USERTABLE WHERE U_USERNAME = " + username;
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
         User u;
@@ -103,7 +103,7 @@ import java.util.List;
      */
     @Override
     public User createUser(User u) {
-        String sql = "INSERT INTO USERTABLE (U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_DOB, U_PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO USERTABLE (U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_DOB, U_PASSWORD) VALUES ( ?, ?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(sql,
                 u.getUsername(),
