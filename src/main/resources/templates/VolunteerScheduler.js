@@ -1,4 +1,4 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
 
     $("#createUserSubmitButton").click(function() {
        var firstName = document.getElementById("firstName").value;
@@ -23,4 +23,4 @@
            }
        })
     });
-});*/
+});
