@@ -16,6 +16,7 @@ import java.util.List;
 
 
 
+
 @Controller
 @RequestMapping(path="/home")
 public class EventController {
@@ -37,7 +38,7 @@ public class EventController {
         eventRepository.save(e);
         */
         eventRepository.save(e);
-        return "home";
+        return "redirect:/home";
     }
 
     @GetMapping(path="/all")
