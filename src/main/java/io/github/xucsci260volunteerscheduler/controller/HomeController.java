@@ -10,8 +10,6 @@ public class HomeController {
     public String goHome() {
         //return "/src/main/resources/templates/home.html";
        return "home";
-//<<<<<<< HEAD
-//=======
 }
 
     @RequestMapping(value = {"/about"})
@@ -30,6 +28,4 @@ public class HomeController {
     public String goCreateEvent(){
       return "Event";
     }
-
-//>>>>>>> dev
 }
