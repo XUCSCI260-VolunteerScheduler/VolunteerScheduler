@@ -14,14 +14,13 @@ import io.github.xucsci260volunteerscheduler.domain.Event;
 import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
 import io.github.xucsci260volunteerscheduler.dal.implementations.EventRpositoryImpl;
 import java.util.List;
-import org.springframework.ui.Model;
 
 
 
 
 
 @Controller
-
+@RequestMapping(path="/home")
 public class EventController {
     @Autowired
     private EventRepository eventRepository;
@@ -49,6 +48,7 @@ public class EventController {
         return eventRepositoryImpl.findAll();
 
     }
+<<<<<<< HEAD
 
     @RequestMapping(path="/home")
     public String home(Model model){
@@ -61,4 +61,6 @@ public class EventController {
         eventRepositoryImpl.save(event);
         return "redirect:home";
     }
+=======
+>>>>>>> parent of 2e1ca7b... event
 }
