@@ -51,7 +51,7 @@ public class UserController {
         return userService.getUser(request);
     }
 
-    @RequestMapping(value = "/users/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/users/create", method = RequestMethod.GET)
     public String createUser(@RequestParam("username") String username,
                                          @RequestParam("email") String email,
                                          @RequestParam("firstName") String first,
