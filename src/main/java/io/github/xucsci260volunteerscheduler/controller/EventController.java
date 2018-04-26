@@ -36,6 +36,7 @@ public class EventController {
         e.setState(state);
         eventRepository.save(e);
         */
+        eventRepository.save(e);
         return "home";
     }
 
