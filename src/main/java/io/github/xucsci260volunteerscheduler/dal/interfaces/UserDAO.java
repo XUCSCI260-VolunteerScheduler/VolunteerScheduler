@@ -1,6 +1,6 @@
 package io.github.xucsci260volunteerscheduler.dal.interfaces;
 
-import io.github.xucsci260volunteerscheduler.domain.objects.User;
+import io.github.xucsci260volunteerscheduler.domain.User;
 import io.github.xucsci260volunteerscheduler.domain.requests.CreateUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
 

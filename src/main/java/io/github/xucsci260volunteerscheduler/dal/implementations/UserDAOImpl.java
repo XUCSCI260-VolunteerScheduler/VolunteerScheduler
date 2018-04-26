@@ -1,7 +1,7 @@
 package io.github.xucsci260volunteerscheduler.dal.implementations;
 
 import io.github.xucsci260volunteerscheduler.dal.interfaces.UserDAO;
-import io.github.xucsci260volunteerscheduler.domain.objects.User;
+import io.github.xucsci260volunteerscheduler.domain.User;
 import io.github.xucsci260volunteerscheduler.domain.requests.CreateUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
