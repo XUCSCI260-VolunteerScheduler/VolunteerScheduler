@@ -18,9 +18,9 @@ public class GetUserRequest {
             case EMAIL:
                 this.email = email;
                 break;
-          /*  case USERNAME:
+            case USERNAME:
                 this.username = username;
-                break;*/
+                break;
         }
     }
 

@@ -35,14 +35,14 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    /*@RequestMapping(value = "/users/get/username/{username}", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/get/username/{username}", method = RequestMethod.GET)
     public @ResponseBody User getUserByUsername(@PathVariable("username") String username) {
         return getUser(new GetUserRequest(GetMethodEnum.USERNAME, username, username));
-    }*/
+    }
 
     @RequestMapping(value = "/users/get/email/{email}", method = RequestMethod.GET)
     public @ResponseBody User getUserByEmail(@PathVariable("email") String email) {
-        return getUser(new GetUserRequest(GetMethodEnum.EMAIL, email));
+        return getUser(new GetUserRequest(GetMethodEnum.EMAIL, email, ""));
     }
 
     private User getUser(GetUserRequest request) {

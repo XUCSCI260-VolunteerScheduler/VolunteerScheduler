@@ -55,9 +55,9 @@ import java.util.List;
             case EMAIL:
                 u = getUserEmail(request.getEmail());
                 break;
-            /*case USERNAME:
-                u = getUserUsername();
-                break;*/
+            case USERNAME:
+                u = getUserUsername(request.getUsername());
+                break;
             default:
                 throw new IndexOutOfBoundsException("Invalid Request");
         }
@@ -66,7 +66,7 @@ import java.util.List;
     }
 
     private User getUserEmail(String email) {
-        String sql = "SELECT * FROM USERTABLE WHERE U_EMAIL = " + email;
+        String sql = "SELECT * FROM USERTABLE WHERE U_EMAIL ALL = " + email;
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
         User u;
