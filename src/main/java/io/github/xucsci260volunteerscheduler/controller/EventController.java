@@ -13,12 +13,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import io.github.xucsci260volunteerscheduler.domain.Event;
 import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
 import java.util.List;
+import org.springframework.ui.Model;
 
 
 
 
 @Controller
-@RequestMapping(path="/home")
+
 public class EventController {
     @Autowired
     private EventRepository eventRepository;
@@ -45,5 +46,17 @@ public class EventController {
     public @ResponseBody List<Event> getAllEvents() {
         return eventRepository.findAll();
 
+    }
+
+    @RequestMapping(path="/home")
+    public String home(Model model){
+        model.addAttribute("eventList", eventRepository.findAll());
+        return "home";
+    }
+
+    @RequestMapping(value="/addEventT", method=RequestMethod.POST)
+    public String addEvent(@ModelAttribute Event event) {
+        eventRepository.save(event);
+        return "redirect:home";
     }
 }
