@@ -18,17 +18,17 @@ can find volunteer organization to volunteer for. We are a software engineering
 of 5 total people that have worked on this application. The purpose that came
 behind this project was to bring together volunteer and volunteer organizations.
 This website application is trying to remove any middle men needed in the process.
-If you don't have an account sign up <a href="Sign-up.html">here</a>. If you do have an account you may also
-login <a href="Login.html">here</a>.
+If you don't have an account sign up <a href="CreateUser.html" th:action="@{/CreateUser}">here</a>. If you do have an account you may also
+login <a href="Login.html" th:action="@{/Login}">here</a>.
 
   <br/>
-  <a href="home.html" th:action="@{/home}">Home</a>
+  <a th:href="home.html" th:action="@{/home}">Home</a>
   <br/>
-  <a href="Login.html" th:action="@{/Login}">Login</a>
+  <a th:href="Login.html" th:action="@{/Login}">Login</a>
   <br/>
-  <a href="CreateUser.html" th:action="@{/CreateUser}">Sign Up</a>
+  <a th:href="CreateUser.html" th:action="@{/CreateUser}">Sign Up</a>
   <br/>
-  <a href="Event.html" th:action="@{/CreateEvent}">Event</a>
+  <a th:href="Event.html" th:action="@{/CreateEvent}">Event</a>
 
 
 
