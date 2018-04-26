@@ -15,7 +15,7 @@ public class Event {
     public Event(String name, String desc, String email, String address, String city, String zip, String state, String startTime, String endTime, String date){
         State realState = State.valueOf(state);
 
-        setVars(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
+        setVars(name, desc, email, address, city, zip, state, startTime, endTime, date);
     }
 
     private void setVars(String name, String desc, String email, String address, String city, String zip, String state, String startTime, String endTime, String date){

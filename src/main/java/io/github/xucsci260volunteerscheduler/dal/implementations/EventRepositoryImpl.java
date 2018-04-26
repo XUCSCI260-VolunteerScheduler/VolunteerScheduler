@@ -8,7 +8,7 @@ package io.github.xucsci260volunteerscheduler.dal.implementations;
         import java.util.List;
 
 
- public class EventRpositoryImpl implements EventRepository
+ public class EventRepositoryImpl implements EventRepository
  {
    private JdbcTemplate jdbcTemplate;
 
