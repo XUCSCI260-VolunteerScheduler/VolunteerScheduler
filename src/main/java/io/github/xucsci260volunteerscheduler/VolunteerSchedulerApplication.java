@@ -7,6 +7,13 @@ import org.springframework.stereotype.*;
 
 @SpringBootApplication
 public class VolunteerSchedulerApplication {
+
+    @RequestMapping("/")
+    @ResponseBody
+    String home(){
+      return "home";
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(VolunteerSchedulerApplication.class, args);
     }
