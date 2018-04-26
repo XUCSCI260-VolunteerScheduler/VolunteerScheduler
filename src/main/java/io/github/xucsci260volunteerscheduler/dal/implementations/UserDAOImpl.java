@@ -29,7 +29,7 @@ import java.util.List;
      */
     @Override
     public List<User> getAllUsers() {
-        String sql = "SELECT * FROM USERTABLE";
+        String sql = "SELECT ALL FROM USERTABLE";
 
         return jdbcTemplate.query(sql,
                 (rs, rowNum) ->
