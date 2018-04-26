@@ -12,7 +12,7 @@ package io.github.xucsci260volunteerscheduler.dal.implementations;
  {
    private JdbcTemplate jdbcTemplate;
 
-   public EventRpositoryImpl(JdbcTemplate jdbcTemplate){
+   public EventRepositoryImpl(JdbcTemplate jdbcTemplate){
      this.jdbcTemplate = jdbcTemplate;
    }
 
