@@ -81,11 +81,8 @@ import java.util.List;
     }
 
     private User getUserUsername(String username) {
-<<<<<<< HEAD
         String sql = "SELECT FROM USERTABLE WHERE U_USERNAME = " + username;
-=======
-        String sql = "SELECT ANY FROM USERTABLE WHERE U_USERNAME = " + username;
->>>>>>> 4ab989398786ba8ba3a00828599204c278a46888
+
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
         User u;
