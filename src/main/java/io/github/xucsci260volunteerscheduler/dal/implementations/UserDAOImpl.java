@@ -65,21 +65,6 @@ import java.util.List;
         return u;
     }
 
-    private User getUserID(int ID) {
-        String sql = "SELECT * FROM USERTABLE WHERE U_ID = " + ID;
-
-        List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
-        User u;
-
-        if (users.size() == 0) {
-            u = null;
-        } else {
-            u = users.get(0);
-        }
-
-        return u;
-    }
-
     private User getUserEmail(String email) {
         String sql = "SELECT * FROM USERTABLE WHERE U_EMAIL = " + email;
 
