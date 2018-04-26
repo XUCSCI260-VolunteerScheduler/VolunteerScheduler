@@ -2,7 +2,7 @@ package io.github.xucsci260volunteerscheduler.services.implementations;
 
 import io.github.xucsci260volunteerscheduler.dal.interfaces.UserDAO;
 import io.github.xucsci260volunteerscheduler.domain.helpers.GetMethodEnum;
-import io.github.xucsci260volunteerscheduler.domain.objects.User;
+import io.github.xucsci260volunteerscheduler.domain.User;
 import io.github.xucsci260volunteerscheduler.domain.requests.CreateUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.requests.GetUserRequest;
 import io.github.xucsci260volunteerscheduler.domain.responses.CreateUserResponse;
