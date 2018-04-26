@@ -55,9 +55,9 @@ import java.util.List;
             case EMAIL:
                 u = getUserEmail(request.getEmail());
                 break;
-            case USERNAME:
+            /*case USERNAME:
                 u = getUserUsername(request.getUsername());
-                break;
+                break;*/
             default:
                 throw new IndexOutOfBoundsException("Invalid Request");
         }
@@ -66,7 +66,7 @@ import java.util.List;
     }
 
     private User getUserEmail(String email) {
-        String sql = "ALL SELECT * FROM USERTABLE WHERE U_EMAIL  = " + email;
+        String sql = "SELECT * FROM USERTABLE WHERE U_EMAIL ALL = " + email;
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
         User u;
@@ -80,8 +80,8 @@ import java.util.List;
         return u;
     }
 
-    private User getUserUsername(String username) {
-        String sql = "ALL SELECT * FROM USERTABLE WHERE U_USERNAME =  " + username;
+    /*private User getUserUsername(String username) {
+        String sql = "SELECT * FROM USERTABLE WHERE U_USERNAME ALL =  " + username;
 
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
@@ -94,7 +94,7 @@ import java.util.List;
         }
 
         return u;
-    }
+    }*/
 
     /**
      * insert user into database
