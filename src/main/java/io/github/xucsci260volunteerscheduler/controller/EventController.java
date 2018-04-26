@@ -56,7 +56,7 @@ public class EventController {
 
     @RequestMapping(value="/addEventT", method=RequestMethod.POST)
     public String addEvent(@ModelAttribute Event event) {
-        eventRepository.save(event);
+        eventRepository.insert(event);
         return "redirect:home";
     }
 }
