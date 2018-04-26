@@ -9,11 +9,11 @@ package io.github.xucsci260volunteerscheduler.dal.interfaces;
         import java.util.List;
         import org.springframework.stereotype.Repository;
 
-public interface EventRepository extends CrudRepository {
-    public List<Event> findAll();
-}
-
-
-//public interface EventRepository extends MongoRepository<Event, String> {
-//        public List<Event> findAll();
+//public interface EventRepository extends CrudRepository {
+//    public List<Event> findAll();
 //}
+
+
+public interface EventRepository extends MongoRepository<Event, String> {
+        public List<Event> findAll();
+}
