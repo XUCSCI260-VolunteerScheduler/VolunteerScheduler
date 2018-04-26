@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //import src.main.java.io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository.java;
 import io.github.xucsci260volunteerscheduler.domain.Event;
 import io.github.xucsci260volunteerscheduler.dal.interfaces.EventRepository;
+import io.github.xucsci260volunteerscheduler.dal.implementations.EventRpositoryImpl;
 import java.util.List;
 import org.springframework.ui.Model;
 
@@ -26,8 +27,8 @@ public class EventController {
     private EventRepository eventRepository;
 
     @RequestMapping(value="/events/create", method = RequestMethod.GET)
-    public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime, @RequestParam String endTime, @RequestParam String date) {
-        Event e = new Event(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
+    public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime, @RequestParam String endTime, @RequestParam String date) {
+        Event e = new Event(name, desc, email, address, city, zip, state, startTime, endTime, date);
 /*
         e.setName(name);
         e.setDesc(desc);
@@ -45,19 +46,19 @@ public class EventController {
 
     @GetMapping(path="/all")
     public @ResponseBody List<Event> getAllEvents() {
-        return eventRepository.findAll();
+        return eventRepositoryImpl.findAll();
 
     }
 
     @RequestMapping(path="/home")
     public String home(Model model){
-        model.addAttribute("eventList", eventRepository.findAll());
+        model.addAttribute("eventList", eventRepositoryImpl.findAll());
         return "home";
     }
 
     @RequestMapping(value="/addEventT", method=RequestMethod.POST)
     public String addEvent(@ModelAttribute Event event) {
-        eventRepository.save(event);
+        eventRepositoryImpl.save(event);
         return "redirect:home";
     }
 }
