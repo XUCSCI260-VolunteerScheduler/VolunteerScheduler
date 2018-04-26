@@ -33,15 +33,12 @@ import java.util.List;
 
         return jdbcTemplate.query(sql,
                 (rs, rowNum) ->
-                    new User(rs.getInt("U_ID"),
-                             rs.getDate("U_DOB"),
-                             rs.getDate("U_JOINDATE"),
+                    new User(rs.getDate("U_DOB"),
                              rs.getString("U_USERNAME"),
                              rs.getString("U_EMAIL"),
                              rs.getString("U_FIRSTNAME"),
                              rs.getString("U_LASTNAME"),
-                             rs.getString("U_PASSWORD"),
-                             rs.getString("U_PASSWORDHASH")));
+                             rs.getString("U_PASSWORD")));
     }
 
     /**
@@ -55,9 +52,6 @@ import java.util.List;
         User u;
 
         switch (request.getMethod()) {
-            case ID:
-                u = getUserID(request.getID());
-                break;
             case EMAIL:
                 u = getUserEmail(request.getEmail());
                 break;
@@ -124,7 +118,7 @@ import java.util.List;
      */
     @Override
     public User createUser(User u) {
-        String sql = "INSERT INTO USERTABLE (U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_DOB, U_JOINDATE, U_PASSWORD, U_PASSWORDHASH) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO USERTABLE (U_USERNAME, U_EMAIL, U_FIRSTNAME, U_LASTNAME, U_DOB, U_PASSWORD) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         jdbcTemplate.update(sql,
                 u.getUsername(),
@@ -132,9 +126,7 @@ import java.util.List;
                 u.getFirstName(),
                 u.getLastName(),
                 u.getDob(),
-                u.getJoinDate(),
-                u.getPassword(),
-                u.getPasswordHash());
+                u.getPassword());
 
         return u;
     }
