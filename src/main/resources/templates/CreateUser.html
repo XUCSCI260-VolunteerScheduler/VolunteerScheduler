@@ -9,7 +9,7 @@
         <h1>Sign-Up</h1>
     <hr/>
 
-    <form id="createUser" th:action="@{/users/create}">
+    <form id="createUser" method="get" th:action="@{/users/create}">
         <table>
             <tr>
                 <td>First Name:</td>
@@ -26,11 +26,11 @@
             </tr>
             <tr>
                 <td>Email Address:</td>
-                <td><input type="text" name="email" th:action = "@{/users/get/email/{email}}"/></td>
+                <td><input type="text" name="email" method="get" th:action = "@{/users/get/email/{email}}"/></td>
             </tr>
             <tr>
                 <td>Username:</td>
-                <td><input type="text" name="username" th:action = "@{/users/get/username/{username}}"/></td>
+                <td><input type="text" name="username" method="get" th:action = "@{/users/get/username/{username}}"/></td>
             </tr>
 
             <tr>
