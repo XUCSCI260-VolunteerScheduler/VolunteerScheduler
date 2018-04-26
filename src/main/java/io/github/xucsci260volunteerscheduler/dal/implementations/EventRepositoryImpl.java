@@ -66,7 +66,7 @@ public List<Event> findAll()
   String sql = "SELECT ALL FROM EVENTTABLE";
   return jdbcTemplate.query(sql,
          (rs, rowNum) ->
-         new User(rs.getString("E_NAME"),
+         new Event(rs.getString("E_NAME"),
          rs.getString("E_DESC"),
          rs.getString("E_EMAIL"),
          rs.getString("E_ADDRESS"),
