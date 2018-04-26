@@ -66,7 +66,7 @@ import java.util.List;
     }
 
     private User getUserEmail(String email) {
-        String sql = "SELECT ANY FROM USERTABLE WHERE U_EMAIL = " + email;
+        String sql = "SELECT * FROM USERTABLE WHERE U_EMAIL ALL " + email;
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
         User u;
@@ -81,7 +81,7 @@ import java.util.List;
     }
 
     private User getUserUsername(String username) {
-        String sql = "SELECT * FROM USERTABLE WHERE U_USERNAME = " + username;
+        String sql = "SELECT * FROM USERTABLE WHERE U_USERNAME ALL " + username;
 
 
         List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper(User.class));
