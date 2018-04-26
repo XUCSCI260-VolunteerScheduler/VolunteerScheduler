@@ -14,7 +14,7 @@ package io.github.xucsci260volunteerscheduler.dal.interfaces;
 //}
 
 
-public interface EventRepository extends MongoRepository<Event, String> {
+public interface EventRepository{
         List<Event> findAll();
 
         Event saveEvent(Event e);
