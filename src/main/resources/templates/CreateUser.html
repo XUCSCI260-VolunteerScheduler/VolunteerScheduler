@@ -2,14 +2,12 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Create User</title>
-</head>
 <link rel="stylesheet" type="text/css" href="styler.css"/>
+</head>
 <body>
     <div id="header">
         <h1>Sign-Up</h1>
-    </div>
-
-    <hr>
+    <hr/>
 
     <form id="createUser" method="post" th:action="@{/users/create}">
         <table>
@@ -49,6 +47,7 @@
                 <td><input id="createUserSubmitButton" type="submit" name="submit" value="Submit"/></td>
             </tr>
         </table>
+        </div>
     </form>
 </body>
 </html>
