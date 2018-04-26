@@ -72,7 +72,7 @@ public class UserController {
         return responseString;
     }
 
-    @RequestMapping(value = "/CreateUser", method = RequestMethod.GET)
+    @RequestMapping(value = "/CreateUser")
     public String createUserForm() {
         return "CreateUser";
     }
