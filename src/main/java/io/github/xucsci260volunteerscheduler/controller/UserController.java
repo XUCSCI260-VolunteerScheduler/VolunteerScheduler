@@ -72,6 +72,6 @@ public class UserController {
 
     @RequestMapping(value = "/CreateUser", method = RequestMethod.GET)
     public String createUserForm() {
-        return "home";
+        return "CreateUser";
     }
 }
