@@ -37,12 +37,12 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @RequestMapping(value = "/users/get/username/{username}", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/get/username/{username}", method = RequestMethod.POST)
     public @ResponseBody User getUserByUsername(@PathVariable("username") String username) {
         return getUser(new GetUserRequest(GetMethodEnum.USERNAME, username, username));
     }
 
-    @RequestMapping(value = "/users/get/email/{email}", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/get/email/{email}", method = RequestMethod.POST)
     public @ResponseBody User getUserByEmail(@PathVariable("email") String email) {
         return getUser(new GetUserRequest(GetMethodEnum.EMAIL, email, ""));
     }
@@ -51,7 +51,7 @@ public class UserController {
         return userService.getUser(request);
     }
 
-    @RequestMapping(value = "/users/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/create", method = RequestMethod.POST)
     public String createUser(@RequestParam("username") String username,
                                          @RequestParam("email") String email,
                                          @RequestParam("firstName") String first,
