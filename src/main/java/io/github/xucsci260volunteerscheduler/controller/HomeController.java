@@ -3,6 +3,7 @@ package io.github.xucsci260volunteerscheduler.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import io.github.xucsci260volunteerscheduler.domain.Event;
+//import org.springframework.ui.Model;
 
 @Controller
 public class HomeController {
