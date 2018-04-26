@@ -40,7 +40,7 @@ public class EventController {
         e.setState(state);
         eventRepository.save(e);
         */
-        eventRepositoryImpl.save(e);
+        eventRepositoryImpl.saveEvent(e);
         return "redirect:/home";
     }
 
@@ -58,7 +58,7 @@ public class EventController {
 
     @RequestMapping(value="/addEventT", method=RequestMethod.POST)
     public String addEvent(@ModelAttribute Event event) {
-        eventRepositoryImpl.save(event);
+        eventRepositoryImpl.saveEvent(event);
         return "redirect:home";
     }
 }
