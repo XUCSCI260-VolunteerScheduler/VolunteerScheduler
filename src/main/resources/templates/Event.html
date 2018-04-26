@@ -2,16 +2,16 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Create User</title>
-<link rel="stylesheet" type="text/css" href="styler.css"/>
+    <link rel="stylesheet" type="text/css" href="styler.css"/>
 </head>
 <body>
-    <div id="header">
-        <h1>Event</h1>
+<div id="header">
+    <h1>Event</h1>
 
 
     <hr/>
 
-    <form id="createEvent" method="post" th:action="@{/events/create}">
+    <form id="createEvent" method="post" th:action="/addEvent">
         <table>
             <tr>
                 <td>Name:</td>
@@ -54,10 +54,11 @@
                 <td><input type="text" name="email"/></td>
             </tr>
             <tr>
-                <td><input id="createEventSubmitButton" type="submit" name="submit" value="Submit" th:action="@{/home}"/></td>
+                <td><input id="createEventSubmitButton" type="submit" name="submit" value="Submit"/></td>
             </tr>
         </table>
     </form>
-    </div>
+</div>
 </body>
 </html>
+
