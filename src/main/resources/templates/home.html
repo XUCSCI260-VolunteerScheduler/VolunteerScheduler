@@ -47,16 +47,11 @@
     <tbody>
     <tr th:each="event : ${eventList}">
       <td th:text="${event.Name}"></td>
-      <td th:text="${car.description}"></td>
+      <td th:text="${event.description}"></td>
     </tr>
     </tbody>
   </table>
 <br/>
-  <form action="/addEventT" method="POST">
-    Name <input type="text" id="make" name="make" /><br />
-    desc <input type="text" id="desc" name="desc" /><br /><br />
-    <input type="submit" />
-  </form>
 
 </div>
 
