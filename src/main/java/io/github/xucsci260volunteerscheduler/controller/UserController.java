@@ -45,11 +45,6 @@ public class UserController {
         return getUser(new GetUserRequest(GetMethodEnum.EMAIL, 0, email, ""));
     }
 
-    @RequestMapping(value = "/users/get/id/{ID}", method = RequestMethod.GET)
-    public @ResponseBody User getUserByID(@PathVariable("ID") int id) {
-        return getUser(new GetUserRequest(GetMethodEnum.ID, id, "", ""));
-    }
-
     private User getUser(GetUserRequest request) {
         return userService.getUser(request);
     }
