@@ -5,6 +5,6 @@ package io.github.xucsci260volunteerscheduler.domain.helpers;
  */
 
 public enum GetMethodEnum {
-    EMAIL,
-    USERNAME
+    EMAIL
+    //USERNAME
 }

@@ -80,7 +80,7 @@ import java.util.List;
         return u;
     }
 
-  /*  private User getUserUsername(String username) {
+    private User getUserUsername(String username) {
         String sql = "SELECT * FROM USERTABLE WHERE U_USERNAME ALL =  " + username;
 
 
@@ -94,7 +94,7 @@ import java.util.List;
         }
 
         return u;
-    }*/
+    }
 
     /**
      * insert user into database

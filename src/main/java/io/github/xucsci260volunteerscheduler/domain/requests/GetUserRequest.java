@@ -12,13 +12,13 @@ public class GetUserRequest {
     private String username;
     private GetMethodEnum method;
 
-    public GetUserRequest(GetMethodEnum method, String email, String username) {
+    public GetUserRequest(GetMethodEnum method, String email) {
         this.method = method;
         switch (method) {
             case EMAIL:
                 this.email = email;
                 break;
-            /*case USERNAME:
+          /*  case USERNAME:
                 this.username = username;
                 break;*/
         }
