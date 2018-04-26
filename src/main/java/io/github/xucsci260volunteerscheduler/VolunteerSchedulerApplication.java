@@ -8,7 +8,7 @@ import org.springframework.stereotype.*;
 @SpringBootApplication
 public class VolunteerSchedulerApplication {
 
-    @RequestMapping("/home")
+    @RequestMapping("home")
     @ResponseBody
     String home(){
       return "../../../resources/templates/home";
