@@ -1,14 +1,16 @@
 package io.github.xucsci260volunteerscheduler.domain;
-
+import org.springframework.data.mongodb.core.mapping.Document;
 //import java.sql.Date;
 
 /**
  *Created on 4/20
  * Event class
  */
-
+@Document(collection = "events")
 public class Event {
-    private String name, desc, email, phone, address, city, zip, state, startTime, endTime, date;
+    private String name, desc, email, address, city, zip, state, startTime, endTime, date;
+
+    public Event(){}
 
     public Event(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, String date){
         State realState = State.valueOf(state);
@@ -16,15 +18,14 @@ public class Event {
         setVars(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
     }
 
-    private void setVars(String name, String desc, String email, String phone, String address, String city, String zip, String state, String startTime, String endTime, String date){
+    private void setVars(String name, String desc, String email, String address, String city, String zip, String state, String startTime, String endTime, String date){
         this.name = name;
         this.desc = desc;
         this.email = email;
-        this.phone = phone;
         this.address = address;
         this.city = city;
         this.zip = zip;
-        this.state = state;        
+        this.state = state;
         this.startTime = startTime;
         this.endTime = endTime;
         this.date = date;
