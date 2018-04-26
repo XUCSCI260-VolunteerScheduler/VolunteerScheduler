@@ -22,7 +22,7 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
-    @RequestMapping(value="/addEvent", method = RequestMethod.GET)
+    @RequestMapping(value="/events/create", method = RequestMethod.GET)
     public String addNewEvent(@RequestParam String name, @RequestParam String desc, @RequestParam String email, @RequestParam String phone, @RequestParam String address, @RequestParam String city, @RequestParam String zip, @RequestParam String state, @RequestParam String startTime, @RequestParam String endTime, @RequestParam String date) {
         Event e = new Event(name, desc, email, phone, address, city, zip, state, startTime, endTime, date);
 /*
