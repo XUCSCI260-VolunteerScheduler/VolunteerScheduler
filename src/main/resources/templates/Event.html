@@ -11,7 +11,7 @@
 
     <hr/>
 
-    <form id="createEvent" method="POST" th:action="@{/events/create}">
+    <form action="/addEventT" method="POST">
         <table>
             <tr>
                 <td>Name:</td>
@@ -54,7 +54,7 @@
                 <td><input type="text" name="email"/></td>
             </tr>
             <tr>
-                <td><input id="createEventSubmitButton" type="submit" name="submit" value="Submit"/></td>
+                <td><input type="submit" /></td>
             </tr>
         </table>
     </form>
